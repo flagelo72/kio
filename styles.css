@@ -1,0 +1,179 @@
+body {
+    font-family: 'Oswald', sans-serif;
+    background: linear-gradient(to bottom, #0c0c0c, #e0e0e0);
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente en la página */
+    align-items: center; /* Centra verticalmente en la página */
+    margin-top: 20px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 50px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 100%; /* Ancho máximo del contenedor */
+}
+
+/* Media query para hacerlo responsivo */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Cambiar la dirección de flex a columna */
+        align-items: flex-start; /* Alineación vertical superior en dispositivos pequeños */
+    }
+}
+
+
+.inventory-form {
+    flex: 1;
+    padding: 20px;
+    border-radius: 10px;
+    background: #f8f8f8;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.inventory-form h2 {
+    color: #333;
+}
+
+.inventory-form label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.inventory-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.inventory-form button {
+    background: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.inventory-form button:hover {
+    background: #555;
+}
+
+.inventory-list {
+    flex: 1;
+    padding: 20px;
+    border-radius: 10px;
+    background: #f8f8f8;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.inventory-list h2 {
+    color: #333;
+}
+
+#product-list {
+    list-style: none;
+    padding: 0;
+}
+
+#product-list li {
+    margin-bottom: 10px;
+    padding: 10px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#product-list button {
+    background: #333;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+#product-list button:hover {
+    background: #555;
+}
+
+
+.table-container {
+    max-height: 500px; 
+    overflow-y: auto; 
+}
+
+.scrollable-table {
+    width: 100%;
+    border-collapse: collapse;
+    
+}
+/* ... (código anterior) ... */
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semi-transparente */
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
+}
+
+/* ... (código posterior) ... */
+#print-button {
+    background: #000; /* Color de fondo negro */
+    color: #fff; /* Color del texto blanco */
+    border: none; /* Sin borde */
+    padding: 10px 20px; /* Espaciado interno para hacer clic */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambiar el cursor al pasar el ratón */
+    font-size: 16px; /* Tamaño de fuente */
+    position: absolute; /* Posición absoluta para controlar la ubicación */
+    bottom: 10px; /* 10px desde la parte inferior del contenedor */
+    right: 10px; /* 10px desde el lado derecho del contenedor */
+}
+
+/* Agregar un icono de impresora usando FontAwesome (puedes usar otros iconos o fuentes de iconos) */
+#print-button::before {
+    content: "\f02f"; /* Código Unicode del icono de impresora en FontAwesome */
+    font-family: FontAwesome; /* Fuente de icono */
+    margin-right: 5px; /* Espaciado entre el icono y el texto */
+}
+
+/* Media query para hacerlo responsive */
+@media (max-width: 768px) {
+    #print-button {
+        position: static; /* Restaurar la posición estática en dispositivos pequeños */
+        display: block; /* Mostrar como bloque para que esté debajo de la lista */
+        margin-top: 10px; /* Espacio superior en dispositivos pequeños */
+        right: auto; /* Restaurar el lado derecho */
+        bottom: auto; /* Restaurar la posición desde la parte inferior */
+    }
+}
+
+
+
