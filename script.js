@@ -6,17 +6,30 @@ const printButton = document.getElementById('print-button');
 // Array para almacenar productos
 let products = [];
 
+// Función para verificar si el nombre de un producto ya existe en la lista
+function isProductAlreadyAdded(name) {
+    return products.some((product) => product.name === name);
+}
+
 // Evento para agregar producto
 productForm.addEventListener('submit', (e) => {
     e.preventDefault();
 
-    const name = document.getElementById('name').value;
+    const name = document.getElementById('name').value.toUpperCase(); // Convertir a mayúsculas
     const price = parseFloat(document.getElementById('price').value);
     const quantity = parseInt(document.getElementById('quantity').value);
-    // VALIDACIÓN: NO VALIDA LA ENTRADA DE DATOS
+
     if (name && !isNaN(price) && !isNaN(quantity) && price > 0 && quantity > 0) {
-        const product = { name, price, quantity };
-        products.push(product);
+        // Verificar si el nombre ya existe en la lista
+        if (isProductAlreadyAdded(name)) {
+            alert('Este producto ya existe. Se ha actualizado la cantidad y el precio.');
+            const existingProduct = products.find((product) => product.name === name);
+            existingProduct.quantity += quantity;
+            existingProduct.price = price;
+        } else {
+            const product = { name, price, quantity };
+            products.push(product);
+        }
 
         updateProductList();
         productForm.reset();
@@ -25,7 +38,6 @@ productForm.addEventListener('submit', (e) => {
     }
 });
 
-// ... (código anterior) ...
 
 // Obtener elementos del modal
 const deleteModal = document.getElementById('delete-modal');
@@ -142,6 +154,7 @@ productForm.addEventListener("submit", (event) => {
         prompt("Por favor, ingrese un nombre válido para el producto.");
         return; // Salir de la función si no se proporciona un nombre válido
     }
+ //Se agrego validacion para el precio y cantidad
 
     // VALIDACIÓN: VERIFICAR SI EL PRECIO NO ES UN NÚMERO O ES NEGATIVO
     if (isNaN(price) || price <= 0) {
@@ -179,7 +192,6 @@ productForm.addEventListener('reset', () => {
     updateProductList();
 });
 
-// ...
 
 // Actualizar la lista de productos en la página
 function updateProductList(filteredProducts = products) {
