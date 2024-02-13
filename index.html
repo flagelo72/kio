@@ -1,66 +1,22 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barriecito&family=Oswald&family=Tilt+Prism&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestión de Inventario - Almacén X</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="/img/descarga.ico">
+    <link rel="stylesheet" href="style.css">
+    <title>Febrero 14</title>
 </head>
 <body>
-    <header>
-        <h1>Almacén X - Gestión de Inventario</h1>
-    </header>
-    <main>
-
-<input type="text" id="search-input" placeholder="Buscar producto">
-<button id="search-button">Buscar</button>
-
-        <div class="container">
-            <div class="inventory-form">
-                <h2>Agregar Producto</h2>
-                <form id="product-form">
-                    <label for="name">Nombre del Producto:</label>
-                    <input type="text" id="name" required>
-                    
-                    <label for="price">Precio:</label>
-                    <input type="number" id="price" required>
-
-                    <label for="quantity">Cantidad:</label>
-                    <input type="number" id="quantity" required>
-
-                    <button type="submit">Agregar Producto</button><button id="print-button">Imprimir</button>
-                </form>
-            </div>
-
-<div class="inventory-container">
-    <div class="table-container">
-        <table id="productTable" class="scrollable-table">
-            
-            <div class="inventory-list">
-                <h2>Lista de Productos</h2>
-                <ul id="product-list"></ul>
-                
-            </div>
-           
-            
+    <div class="container">
+        <h1>Enviando florcitas virtuales</h1>
+        <img src="/img/BODY3.gif" alt="Imagen de flores" style="width: 150px; height: auto; border: 3px solid white;">
+        <p>Cargando...</p>
+        <div class="caja">
+            <div class="loading"></div>
         </div>
-
-
-<!-- Modal para eliminar productos -->
-<div id="delete-modal" class="modal">
-    <div class="modal-content">
-        <h2>Eliminar Producto</h2>
-        <p>Ingresa la cantidad de productos a eliminar:</p>
-        <input type="number" id="quantity-to-delete" placeholder="Cantidad" min="1">
-        <button id="delete-confirm-button">Eliminar</button>
-        <button id="delete-cancel-button">Cancelar</button>
+        
     </div>
-</div>
-
-    </main>
-    <script src="script.js"></script>
+    
 </body>
 </html>
