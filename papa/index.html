@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bubbles Love</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  
+  
+<!-- Botón que activa el video -->
+<button class="btn-play" id="boton" onclick="mostrarVideo(),ocultarBoton()">Feliz día del padre 🎁💖</button>
+
+<!-- Contenedor oculto del video -->
+<div id="video-container">
+  <video id="video-padre" controls>
+    <source src="papa.mp4" type="video/mp4">
+    Tu navegador no soporta el video 😢
+  </video>
+</div>
+<div id="heart-container"></div>
+<div id="bubbles-text"></div>
+<div id="emoji-container"></div>
+
+
+<script src="app.js"></script>
+
+</body>
+</html>
